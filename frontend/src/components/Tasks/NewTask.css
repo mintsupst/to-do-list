@@ -1,0 +1,45 @@
+/* Edit Task Modal */
+.edit-task-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center modal */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 400px;
+    max-width: 100%; /* Prevent modal from overflowing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  }
+  
+  /* Input and Textarea Fields in Modal */
+  .edit-task-modal input,
+  .edit-task-modal textarea {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Modal Buttons */
+  .edit-task-modal button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 48%; /* Make buttons slightly smaller to fit side by side */
+    border-radius: 5px;
+  }
+  
+  .edit-task-modal button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .edit-task-modal button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
