@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fastapi_app
+    restart: always
+    volumes:
+      - ./backend:/app  # Ensure the SQLite file persists
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./app/test.db  # SQLite database file path
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react_frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000  # Point to backend API

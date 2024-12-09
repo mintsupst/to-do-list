@@ -1,0 +1,7 @@
+backend/app/__pycache__
+backend/app/routers/__pycache__
+backend/app/schemas/__pycache__
+backend/app/services/__pycache__
+pyproject.toml
+node_modules
+frontend/node_modules
